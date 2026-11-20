@@ -1,0 +1,5 @@
+# External dependency of the polar extension, from PyPI.
+# Pinned exactly so a new release cannot break CI on its own; setup.cfg's
+# `polar` extra carries the range users get.
+# To bump: update the version here and run the polar jobs (ci-extensions.yaml).
+graph_longrange==0.4.4

@@ -1,0 +1,11 @@
+# The declared floors (setup.cfg: python_requires >= 3.11, torch >= 2.5).
+# PEP 585 (`list[T]`) and PEP 604 (`X | Y`) are both natively valid at runtime
+# and under TorchScript, which accepts the union syntax from torch 2.2, so FA102
+# is a no-op over the whole tree.
+target-version = "py311"
+
+[lint]
+select = ["FA102"]
+
+# NOTE: nothing currently RUNS ruff — it is absent from .pre-commit-config.yaml
+# and from every CI job, so this file documents intent more than it enforces it.
